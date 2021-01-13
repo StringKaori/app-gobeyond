@@ -1,6 +1,7 @@
 import React from 'react';
 import {SafeAreaView, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import styled from 'styled-components/native';
 
 const MyAccount = () => {
 
@@ -13,7 +14,7 @@ const MyAccount = () => {
 
         <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
           <TouchableOpacity style={styles.botao} onPress={() => {navigate('Home')}}>
-            <Text style={styles.textoBotao}>Ir para Home</Text>
+            <ButtonText style={styles.textoBotao}>Ir para Home</ButtonText>
           </TouchableOpacity>
         </View>
 
@@ -21,6 +22,9 @@ const MyAccount = () => {
   );
 }
 
+const ButtonText = styled.Text`
+  color:#FFF
+`
 
 const styles = StyleSheet.create ({
   botao:{
