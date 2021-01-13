@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import {SafeAreaView, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
   const { navigate } = useNavigation();
 
   return (
-    <View style={{flex:1, alignItems:'center'}}>
+    <SafeAreaView style={{flex:1, alignItems:'center'}}>
         <Text>Home</Text>
 
         <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
@@ -16,7 +16,7 @@ const Home = () => {
           </TouchableOpacity>
         </View>
 
-    </View>
+    </SafeAreaView>
   );
 }
 
