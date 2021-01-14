@@ -13,7 +13,9 @@ export const Confira = styled.TouchableOpacity({
     alignSelf:'flex-end',
     justifyContent:'center',
     alignItems:'center',
-    position:"absolute"
+    position:"absolute",
+    right:15,
+    top:25
 })
 
 export const TextoConfira = styled.Text({
