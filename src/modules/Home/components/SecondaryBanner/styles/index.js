@@ -1,20 +1,26 @@
 import styled from 'styled-components/native';
 
-export const FooterBanner = styled.Image({
-    height: 344,
+
+export const Container = styled.SafeAreaView({
+    flex:1
+})
+
+export const Banner = styled.Image({
+    height: 90,
     width:380,
-    alignSelf:'center',
+    alignSelf:'center'
 })
 
 export const Confira = styled.TouchableOpacity({
     height: 33,
     width:147,
     backgroundColor:'black',
-    alignSelf:'center',
+    alignSelf:'flex-end',
     justifyContent:'center',
     alignItems:'center',
     position:"absolute",
-    bottom:-10
+    right:15,
+    top:25
 })
 
 export const TextoConfira = styled.Text({

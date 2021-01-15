@@ -2,9 +2,9 @@ import React, {useEffect, useState} from 'react';
 import { SafeAreaView, ScrollView } from 'react-native';
 
 import HeaderBar from './components/HeaderBar';
-import Body from './components/Body';
-import Footer from './components/Footer';
-import { FooterPosicao } from './styles';
+import SecondaryBanner from './components/SecondaryBanner';
+import FooterBanner from './components/FooterBanner';
+import { FooterPosition, Container } from './styles';
 import PrimaryBannerSlider from './components/PrimaryBannerSlider';
 
 import services from '../../services';
@@ -30,16 +30,16 @@ const Home = () => {
   }, [])
 
   return (
-    <SafeAreaView style={{flex:1,}}>
+    <Container>
       <HeaderBar />
       <ScrollView>
-          <PrimaryBannerSlider data={banners[0]?.data || []}/>
-          <Body />
-          <FooterPosicao>
-            <Footer />
-          </FooterPosicao>
-        </ScrollView>
-    </SafeAreaView>
+        <PrimaryBannerSlider data={banners[0]?.data || []}/>
+        <SecondaryBanner />
+        <FooterPosition>
+          <FooterBanner />
+        </FooterPosition>
+      </ScrollView>
+    </Container>
   );
 }
 
