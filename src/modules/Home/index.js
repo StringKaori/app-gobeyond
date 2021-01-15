@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { SafeAreaView, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import HeaderBar from './components/HeaderBar';
 import SecondaryBanner from './components/SecondaryBanner';

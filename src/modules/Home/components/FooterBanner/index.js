@@ -1,14 +1,39 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Container, Banner, Confira, TextoConfira } from './styles'
+import services from '../../../../services';
 
-const FooterBanner = () => (
-    <Container>
-        <Banner source={{uri:'http://ec2-54-237-155-186.compute-1.amazonaws.com/storage/images/banners/Fyy8pg6wMdgPeYnwZqZpywGdJDR29y5c2UAUevkP.jpg'}}/>
+const FooterBanner = () => {
 
-        <Confira>
-            <TextoConfira>Confira</TextoConfira>
-        </Confira>    
-    </Container>
-)
+    const [banner, setBanner] = useState([]);
 
+    useEffect(async ()=>{
+    
+        var response;
+
+        try{
+            response = await services.getFooterBanner();
+            
+        console.log(response);
+        }catch(error){
+            console.log(error);
+        }
+    
+        const { data, status } = response;
+
+        setBanner(data);
+
+    }, [])    
+
+    return(
+        
+        <Container>
+            <Banner source={{uri:banner?.config.url || ""}}/>
+            
+
+            <Confira>
+                <TextoConfira>Confira</TextoConfira>
+            </Confira>    
+        </Container>
+    )
+}
 export default FooterBanner;
