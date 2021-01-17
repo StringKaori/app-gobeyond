@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView({
+    marginTop:50,
     flex:1,
     justifyContent:'center',
     alignItems:'center',

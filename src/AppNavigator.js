@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native"
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Home from './modules/Home';
+import Contact from './modules/MyAccount/Contact';
 import MyAccount from './modules/MyAccount';
 import iconHome from './images/iconHome.png';
 import iconMyAccount from './images/iconMyAccount.png';
@@ -24,6 +25,16 @@ const AppNavigator = () => {
             <Screen
              name="Home"
              component={Home}
+             options={{
+               tabBarIcon: () => (
+                 <Image resizeMode="contain" style={{height:25}} source={iconHome}/>
+               )
+              }} 
+            />
+
+          <Screen
+             name="Contact"
+             component={Contact}
              options={{
                tabBarIcon: () => (
                  <Image resizeMode="contain" style={{height:25}} source={iconHome}/>

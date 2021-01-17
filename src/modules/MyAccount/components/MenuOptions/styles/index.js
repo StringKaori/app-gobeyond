@@ -15,6 +15,6 @@ export const TextIcon = styled.Text({
 })
 
 export const Icon = styled.Image({
-    width:23,
+    width:24,
     height:25
 })

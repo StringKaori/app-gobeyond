@@ -9,8 +9,8 @@ const WelcomeMessage = () => {
       <Container>
           <ProfilePicture source={profilePic}/>
           <ProfileWelcomeMessage>
-              Olá Alice.
-              Bem Vinda!
+              {`Olá Alice.
+              Bem Vinda!`}
           </ProfileWelcomeMessage>
       </Container>
     );
